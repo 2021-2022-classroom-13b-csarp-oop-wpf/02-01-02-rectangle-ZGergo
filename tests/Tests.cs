@@ -1,12 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-
-using RectangleProject.Models;
 
 namespace RectangleProject.Tests
 {
@@ -16,7 +9,7 @@ namespace RectangleProject.Tests
         [TestMethod()]
         public void Test()
         {
-            Rectangle r = new Rectangle(4.25,7.34);
+            Rectangle r = new Rectangle(4.25, 7.34);
             double expectedSideA = 4.25;
             double actualSideA = r.SideA;
             Assert.AreEqual(expectedSideA, actualSideA, "A Négyzet konstruktora nem jól határozza meg az egyik oldalt!");

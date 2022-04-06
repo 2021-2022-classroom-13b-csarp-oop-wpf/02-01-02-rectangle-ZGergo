@@ -6,7 +6,11 @@ namespace RectangleProject
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Rectangle teglalap1 = new Rectangle(4.25, 7.13);
+
+            Console.WriteLine(teglalap1.ToString()); 
+
+            Console.ReadLine();
         }
     }
 }
