@@ -1,38 +1,29 @@
-﻿namespace RectangleProject
+﻿using System;
+
+namespace RectangleProject
 {
-    class Rectangle
+    public class Rectangle
     {
-        private double sideA;
-        private double sideB;
+        public double SideA { get; set; }
 
-        public double SideA
-        {
-            get
-            {
-                return sideA;
-            }
-            set
-            {
-                SideA = value;
-            }
-        }
-
-        public double SideB
-        {
-            get
-            {
-                return sideB;
-            }
-            set
-            {
-                SideB = value;
-            }
-        }
+        public double SideB { get; set; }
 
         public Rectangle(double sideA, double sideB)
         {
-            this.sideA = sideA;
-            this.sideB = sideB;
+            this.SideA = sideA;
+            this.SideB = sideB;
+        }
+
+        public double Area { get { return SideA * SideB; } }
+
+        public double Perimeter { get { return 2 * SideA + 2 * SideB; } }
+
+        public override string ToString()
+        {
+            return "A oldal: " + SideA + "\n" +
+                "B oldal: " + SideB + "\n" +
+                "Kerület: " + Math.Round(Area, 2) + "\n" +
+                "Terület: " + Math.Round(Perimeter, 2) + "\n";
         }
     }
 }
